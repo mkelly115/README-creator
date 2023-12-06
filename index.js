@@ -36,13 +36,19 @@ const questions = [
     {
         type: "input",
         message: "Enter Github username",
-        name: "username"
+        name: "github"
     },
     {
         type:"input",
         message: "Enter your email adress",
         name: "email"
     },
+    {
+        type:"list",
+        message: "Select a License",
+        choices: ["MIT","IBM","MPL","None"],
+        name: "license"
+    }
 ];
 
 function writeToFile(fileName, data) {
@@ -75,12 +81,6 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then((answers) => {
         const markdown = generateMarkdown(answers); //Un-Comment when generator (markdown) is created
-        console.log(answers.projectTitle)
-        console.log(answers.description)
-        console.log(answers.installation)
-        console.log(answers.usage)
-        console.log(answers.contribution)
-        console.log(answers.test)
         writeToFile("README.md", markdown); 
 
     });
