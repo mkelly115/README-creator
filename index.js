@@ -57,30 +57,9 @@ function writeToFile(fileName, data) {
     );
 }
 
-// function generateMarkdown(answers) {
-//     return `
-// # ${answers.projectTitle}
-
-// ## Description
-// ${answers.description}
-
-// ## Installation
-// ${answers.installation}
-
-// ## Usage
-// ${answers.usage}
-
-// ## Contribution Guidelines
-// ${answers.contribution}
-
-// ## Test Instructions
-// ${answers.test}
-// `;
-// }
-
 function init() {
     inquirer.prompt(questions).then((answers) => {
-        const markdown = generateMarkdown(answers); //Un-Comment when generator (markdown) is created
+        const markdown = generateMarkdown(answers); 
         writeToFile("README.md", markdown); 
 
     });

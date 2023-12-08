@@ -8,16 +8,17 @@ function selectBadge(license) {
     if (license === "MPL") {
         badge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
     }
-    if (license === "IBM"){
-        `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`
-    } 
-    if (license === "None"){
-        `No License`
+    if (license === "IBM") {
+        badge = `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`
+    }
+    if (license === "None") {
+        badge = ` `
     }
 
     return badge
 };
-
+// path new README into a folder
+// I have zero clue why I cant navigate to the test section - all others work?? Check this before submitting.
 function generateMarkdown(answers) {
     return `
 # ${answers.projectTitle} ${selectBadge(answers.license)}
@@ -27,7 +28,7 @@ function generateMarkdown(answers) {
 2. [Installation](#installation)
 3. [Usage](#usage)  
 4. [Contributing](#contributing)
-5. [Test Instructions](#tests)
+5. [Test Instructions](#test)
 6. [License](#license)
 7. [Contact](#contact)
 
