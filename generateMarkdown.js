@@ -17,8 +17,7 @@ function selectBadge(license) {
 
     return badge
 };
-// path new README into a folder
-// I have zero clue why I cant navigate to the test section - all others work?? Check this before submitting.
+
 function generateMarkdown(answers) {
     return `
 # ${answers.projectTitle} ${selectBadge(answers.license)}
