@@ -14,9 +14,5 @@ In conclusion, I struggled most at the onset of the project, the devdepedencies 
 
 https://drive.google.com/file/d/1o7teFO62piu32je9yBtfxcERveBqy-zm/view
 
-# Live Link
-
-
-
 # Licensing
 MIT License within
